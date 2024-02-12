@@ -7,18 +7,17 @@ export const styles = StyleSheet.create({
         borderColor: colors.gray,
         borderRadius: 4,
         borderWidth: 1,
-        with: 22,
+        width: 22,
         height: 22
     },
-    inputContainer: {
+    innerContainer: {
         borderColor: colors.gray,
-        with: '100%',
+        width: '100%',
         height: '100%',
         justifyContent: 'center',
         alignItems: 'center'
     },
     checkIcon: {
-        width: 19,
-        height: 9
+        // the check icon is already provided in the correct size
     }
 });

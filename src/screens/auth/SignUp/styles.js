@@ -14,5 +14,8 @@ export const styles = StyleSheet.create({
     agreeText: {
         color: colors.blue,
         marginHorizontal: 14
+    },
+    agreeTextBold: {
+        fontWeight: 'bold'
     }
 });
