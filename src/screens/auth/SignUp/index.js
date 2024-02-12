@@ -6,6 +6,7 @@ import Checkbox from '../../../components/Checkbox';
 import Button from '../../../components/Button';
 import Separator from '../../../components/Separator';
 import {styles} from './styles';
+import GoogleLogin from '../../../components/GoogleLogin';
 
 const SignUp = () => {
     const [checked, setChecked] = useState(false);
@@ -22,7 +23,8 @@ const SignUp = () => {
             </View>
             <Button title="Sign Up" style={styles.button}/>
             <Separator text="Or sign up with" />
+            <GoogleLogin />
         </View>
     );
 }
-export default SignUp;
+export default React.memo(SignUp)
