@@ -1,0 +1,6 @@
+framework module Pods_MobiilirakendusTS {
+  umbrella header "Pods-MobiilirakendusTS-umbrella.h"
+
+  export *
+  module * { export * }
+}
