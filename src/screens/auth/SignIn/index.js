@@ -15,6 +15,10 @@ const SignIn = ({navigation}) => {
     const onBack = () => {
         navigation.goBack();
     }
+    const onSignUp = () => {
+        navigation.navigate("SignUp");
+    }
+
     return (
         <SafeAreaView>
         <View style={styles.container}>
@@ -24,7 +28,7 @@ const SignIn = ({navigation}) => {
             <Button title="Sign In" style={styles.button}/>
             <Separator text="Or sign up with" />
             <GoogleLogin />
-            <Text style={styles.footerText}>Don't have an account? <Text style={styles.footerLink}>Sign Up</Text></Text>
+            <Text style={styles.footerText}>Don't have an account? <Text onPress={onSignUp} style={styles.footerLink}>Sign Up</Text></Text>
         </View>
         </SafeAreaView>
     );
