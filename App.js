@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import { SafeAreaView } from "react-native";
-import SignUp from "./src/screens/auth/SignUp";
+import SignIn from "./src/screens/auth/SignIn";
 import { GoogleSignin } from "@react-native-google-signin/google-signin";
+
 import config from "./config"; // .env didn't work for me, so I used a config.js file
 
 const App = () => {
@@ -18,7 +19,7 @@ const App = () => {
 
     return (
         <SafeAreaView>
-            <SignUp />
+            <SignIn />
         </SafeAreaView>
     );
 };
