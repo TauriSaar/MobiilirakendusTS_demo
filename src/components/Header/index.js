@@ -1,11 +1,18 @@
-import React from "react";
+import React, {useState} from "react";
 import { Pressable, Image, Text, View } from "react-native";
+import Input from "../Input";
 import { styles } from "./styles";
 
-const Header = ({ title, onBackPress, onSearch, onLogout, showBack, showSearch, showLogout }) => {
+const Header = ({ title, onBackPress, onLogout, showBack, showSearch, showLogout }) => {
+  const [showSearchInput, setShowSearchInput] = useState(false)
+
+  const onSearch = () => {
+    setShowSearchInput(search => !search)
+  }
+  
   return (
     <View style={styles.container}>
-      {showBack ? (
+      { showBack ? (
         <Pressable hitSlop={20} onPress={onBackPress}>
           <Image style={styles.icon} source={require('../../assets/back.png')} />
         </Pressable>
@@ -13,7 +20,8 @@ const Header = ({ title, onBackPress, onSearch, onLogout, showBack, showSearch, 
         <Pressable hitSlop={20} onPress={onSearch}>
           <Image style={styles.icon} source={require('../../assets/search.png')} />
         </Pressable>
-      ) : null}
+      ) : <View style={styles.space}/>
+      }
       
       <Text style={styles.title}>{title}</Text>
 
@@ -21,7 +29,13 @@ const Header = ({ title, onBackPress, onSearch, onLogout, showBack, showSearch, 
         <Pressable hitSlop={20} onPress={onLogout}>
           <Image style={styles.icon} source={require('../../assets/logout.png')} />
         </Pressable>
-      ) : null}
+      ) : <View style={styles.space}/>
+      }
+      {
+        showSearchInput ? (
+          <Input placeholder="Type oyur keyword"/>
+        ) : null
+      }
     </View>
   );
 };

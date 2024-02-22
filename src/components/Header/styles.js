@@ -16,4 +16,7 @@ export const styles = StyleSheet.create({
     width: 24,
     height: 24,
   },
+  space: {
+    width: 24
+  }
 });
