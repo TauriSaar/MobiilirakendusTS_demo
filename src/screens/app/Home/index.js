@@ -9,7 +9,7 @@ import { products } from "../../../data/products";
 import ProductHomeItem from "../../../components/ProductHomeItem";
 
 const Home = () => {
-    const renderCategory = ({item}) => {
+    const renderCategoryItem = ({item}) => {
         console.log('item => ', item)
         return (
             <CategoryBox title={item?.title} image={item?.image} />
@@ -27,11 +27,10 @@ const Home = () => {
         <SafeAreaView>
             <View style={styles.container}>
                 <Header showSearch={true} title="Find All You Need" />
-                <FlatList style={styles.list} showsHorizontalScrollIndicator={false} data={categories} renderItem={renderCategory} keyExtractor={(item, index) =>
+                <FlatList style={styles.list} horizontal data={categories} renderItem={renderCategoryItem} keyExtractor={(item, index) =>
                 String(index)}/>
-                <FlatList data={products} renderItem={renderProductItem} 
-                keyExtractor={(item) => String(item.id)}/>
-                <Text>Home</Text>
+                <FlatList numColumns={2} key={'item'} data={products} renderItem={renderProductItem} 
+                keyExtractor={(item) => String(item.id)} ListFooterComponent={<View style={{height: 250}}/>} />
             </View>
         </SafeAreaView>
     )

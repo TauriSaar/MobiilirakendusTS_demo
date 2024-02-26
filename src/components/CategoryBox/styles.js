@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
   },
   title: {
-    color: colors.grey,
+    color: colors.gray,
   },
   image: {
     width: 32,

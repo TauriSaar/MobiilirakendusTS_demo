@@ -1,5 +1,10 @@
 export const categories = [
     {
+      id: 0,
+      title: 'Popular',
+      image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Gold_Star.svg/768px-Gold_Star.svg.png',
+    },
+    {
       id: 1,
       title: 'Chair',
       image: 'https://www.red-dot.org/fileadmin/bilder/Kategorien_PD/PD_cat_01.jpg',
