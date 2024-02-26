@@ -8,6 +8,7 @@ import Splash from "./src/screens/auth/Splash";
 import Home from "./src/screens/app/Home";
 import Favorites from "./src/screens/app/Favorites";
 import Profile from "./src/screens/app/Profile";
+import ProductDetails from "./src/screens/app/ProductDetails";
 
 import { GoogleSignin } from "@react-native-google-signin/google-signin";
 
@@ -86,6 +87,7 @@ const App = () => {
                     isSignedIn ? (
                         <>
                         <Stack.Screen name="Tabs" component={Tabs} options={{headerShown: false}} />
+                        <Stack.Screen name="ProductDetails" component={ProductDetails} options={{headerShown: false}} />
                         </>
                     ) : (
                         <>
