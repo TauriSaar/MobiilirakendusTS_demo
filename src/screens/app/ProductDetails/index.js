@@ -8,6 +8,10 @@ const ProductDetails = ({navigation, route}) => {
     const {product} = route.params || {}
     console.log('product =>', product)
 
+    const onBackPress = () => {
+        navigation.goBack();
+    }
+
   return (
     <SafeAreaView style={styles.save}>
       <ScrollView>
@@ -17,6 +21,9 @@ const ProductDetails = ({navigation, route}) => {
                 <Text style={styles.price} >{product?.price}</Text>
                 <Text style={styles.description} >{product?.description}</Text>
             </View>
+            <Pressable onPress={onBackPress} style={styles.backContainer}>
+                <Image style={styles.backIcon} source={require('../../../assets/back.png')} />
+            </Pressable>
       </ScrollView>
         <View style={styles.footer}>
             <Pressable style={styles.bookmarkContainer}>
