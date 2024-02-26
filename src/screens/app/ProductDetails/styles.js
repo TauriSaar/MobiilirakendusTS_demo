@@ -30,4 +30,23 @@ export const styles = StyleSheet.create({
         fontWeight: "300",
         color: colors.textGray,
     },
+    footer: {
+        padding: 24,
+        flexDirection: "row",
+        alignItems: "center",
+
+    },
+    save: {
+        flex: 1,
+    },
+    bookmarkContainer: {
+        backgroundColor: colors.lightGray,
+        padding: 18,
+        borderRadius: 8,
+        marginRight: 16,
+    },
+    bookmarkIcon: {
+        width: 24,
+        height: 24,
+    },
 }); 
