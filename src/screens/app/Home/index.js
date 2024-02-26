@@ -10,18 +10,31 @@ import ProductHomeItem from "../../../components/ProductHomeItem";
 
 const Home = () => {
     const [selectedCategory, setSelectedCategory] = useState()
+    const [keyword, setKeyWord] = useState()
     const [selectedProduct, setSelectedProduct] = useState(products)
 
     useEffect(() => {
-        if (selectedCategory) {
+        if (selectedCategory && !keyword) {
           const updatedSelectedProducts = products.filter((product) =>
             product?.category === selectedCategory
           );
           setSelectedProduct(updatedSelectedProducts);
-        } else {
+        } else if (selectedCategory && keyword) {
+          const updatedSelectedProducts = products.filter((product) =>
+            product?.category === selectedCategory &&
+            product?.title?.toLowerCase().includes(keyword.toLowerCase())
+          );
+          setSelectedProduct(updatedSelectedProducts);
+        } else if (!selectedCategory && keyword) {
+          const updatedSelectedProducts = products.filter((product) =>
+            product?.title?.toLowerCase().includes(keyword.toLowerCase())
+          );
+          setSelectedProduct(updatedSelectedProducts);
+        } else if (!keyword && !selectedCategory) {
             setSelectedProduct(products);
         }
-      }, [selectedCategory]);
+      }, [selectedCategory, keyword]);
+            
       
 
     const renderCategoryItem = ({item}) => {
@@ -41,7 +54,7 @@ const Home = () => {
     return (
         <SafeAreaView>
             <View style={styles.container}>
-                <Header showSearch={true} title="Find All You Need" />
+                <Header showSearch={true} onSearchKeyword={setKeyWord} keyWord={keyword} title="Find All You Need" />
                 <FlatList style={styles.list} horizontal data={categories} renderItem={renderCategoryItem} keyExtractor={(item, index) =>
                 String(index)}/>
                 <FlatList numColumns={2} key={'item'} data={selectedProduct} renderItem={renderProductItem} 
