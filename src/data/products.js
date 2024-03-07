@@ -3,6 +3,11 @@ export const products = [
       id: 1,
       title: 'Loft Style Chair',
       image: 'https://grandrapidschair.com/wp-content/uploads/2016/01/250_Brady_Graphite_Honey-1.jpg',
+      images: [
+        'https://grandrapidschair.com/wp-content/uploads/2016/01/250_Brady_Graphite_Honey-1.jpg',
+        'https://grandrapidschair.com/wp-content/uploads/2016/01/250_BradyChair_InkBlack_Honey_Back-683x1024.jpg',
+        'https://grandrapidschair.com/wp-content/uploads/2019/04/250_Brady_ZincYellow_Natural-1.jpg',
+      ],
       category: 1,
       price: '$20.00',
       description: 'Loft Style Chair is made of by natural wood. The design that is very simple and minimal. This is truly one of the best furnitures in any family for now. With 3 different colors, you can easily select the best match for your home.',
@@ -38,7 +43,7 @@ export const products = [
       images: [
         'https://collinsandhayes-cdn-1.s3.eu-west-2.amazonaws.com/wp-content/uploads/2022/02/14101256/V7A1199-800x800.jpg',
         'https://www.housingunits.co.uk/media/catalog/product/cache/60968cec045f20fb06ab5f7720001507/5/5/555685b1a8eecf2133f18451526a4ede.jpg',
-        'https://media.sofa.com/thumbor/unsafe/https%3A%2F%2Fmedia.sofa.com%2Fmedias%2FSS22-Homepage-Category-Tiles-1-SOFASjpg%3Fcontext%3DbWFzdGVyfHJvb3R8MTM1MzYyfGItYWdIL2pwZWd8aDUyL2g0ZC840Tk40DEwNTgzMDcwLmpwZ3xjNWUzZDYzMjY2NGNhNWJkYjUwNjg4MDIkNzB¡ZTFIYmNiNmE1YWEyNDEwMTFhYWRIYTIOOGMwZGVIZTE10WE1',
+        'https://d5t3j6u2.rocketcdn.me/wp-content/uploads/2022/12/Arlyn-Hernandez-Makeover-Takeover-Living-Room-EHD3.jpg',
       ],
       category: 4,
       price: '$120.00',
