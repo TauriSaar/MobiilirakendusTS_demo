@@ -31,5 +31,5 @@ export const styles = StyleSheet.create({
   },
     icon: {
         // the width and height of the icon is by default 24
-    },
+    }
 }); 

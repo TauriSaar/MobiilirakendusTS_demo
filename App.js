@@ -8,6 +8,7 @@ import Splash from "./src/screens/auth/Splash";
 import Home from "./src/screens/app/Home";
 import Favorites from "./src/screens/app/Favorites";
 import Profile from "./src/screens/app/Profile";
+import Settings from "./src/screens/app/Settings";
 import ProductDetails from "./src/screens/app/ProductDetails";
 
 import { GoogleSignin } from "@react-native-google-signin/google-signin";
@@ -20,6 +21,15 @@ import { SafeAreaProvider } from "react-native-safe-area-context";
 
 import config from "./config"; // .env didn't work for me, so I used a config.js file
 import { colors } from "./src/utils/colors";
+
+const ProfileStack = () => {
+    return (
+        <Stack.Navigator>
+            <Stack.Screen name="Profile" component={Profile} options={{headerShown: false}} />
+            <Stack.Screen name="Settings" component={Settings} options={{headerShown: false}} />
+        </Stack.Navigator>
+    )
+};
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -54,7 +64,7 @@ const Tabs = () => {
         >
             <Tab.Screen name="Home" component={Home} />
             <Tab.Screen name="Favorites" component={Favorites} />
-            <Tab.Screen name="Profile" component={Profile} />
+            <Tab.Screen name="Profile" component={ProfileStack} />
         </Tab.Navigator>
     );
 }
