@@ -16,7 +16,7 @@ const Settings = () => {
     }
 
     const onEditPress = () => {
-        setEditing("ture")
+        setEditing(true)
     }
 
     const onSave = () => {
@@ -37,8 +37,8 @@ const Settings = () => {
                         <Image style={styles.icon} source={require('../../../assets/edit.png')} />
                     </Pressable>
                 </View>
-                <EditableBox onChangeText={(v) => onChange('name, v')} value={values.name} label="User Name" editable={editing} />
-                <EditableBox onChangeText={(v) => onChange('email, v')} value={values.email} label="User Email" editable={editing} />
+                <EditableBox onChangeText={(v) => onChange('name', v)} value={values.name} label="User Name" editable={editing} />
+                <EditableBox onChangeText={(v) => onChange('emai', v)} value={values.email} label="User Email" editable={editing} />
                 {editing ? (<Button onPress={onSave} style={styles.button} title="Save"/>) : null}
 
                 <Text style={[styles.sectionTitle, {marginTop: 40}]}>Help Center</Text>
