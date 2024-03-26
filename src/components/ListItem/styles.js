@@ -23,11 +23,11 @@ export const styles = StyleSheet.create({
         color: colors.blue,
         fontSize: 18,
         fontWeight: 'bold',
-        marginBottom: 6,
     },
     subtitle: {
         color: colors.gray,
         fontSize: 12,
+        marginTop: 6,
     },
     arrow: {
         height: 32,

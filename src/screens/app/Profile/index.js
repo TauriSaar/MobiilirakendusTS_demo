@@ -6,7 +6,7 @@ import ListItem from "../../../components/ListItem";
 import Button from "../../../components/Button";
 import Header from "../../../components/Header";
 
-const Profile = (navigation) => {
+const Profile = ({navigation}) => {
     const num = 10
 
     const  onLogout = () => {
@@ -28,7 +28,7 @@ const Profile = (navigation) => {
                     <ListItem title="My Listings" subtitle={`Already have ${num} listings`} />
                     <ListItem title="Settings" subtitle="Account, FAQ, Privacy" onPress={onSettingsPress} />
                 </View>
-                <Button title="Add new listing" style={styles.button} />
+                <Button title="Add new listing" />
             </View>
         </SafeAreaView>
     )
